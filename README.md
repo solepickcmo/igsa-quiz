@@ -1,1 +1,0 @@
-# igsa-quiz
