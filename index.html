@@ -281,6 +281,22 @@
     color: #444;
     line-height: 1.65;
   }
+  .step-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--teal);
+    background: rgba(15,123,108,0.1);
+    border: 1px solid rgba(15,123,108,0.3);
+    border-radius: 100px;
+    padding: 4px 11px;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: all 0.15s;
+  }
+  .step-link:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
   .tip-label { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; color: var(--teal); margin-bottom: 4px; }
 
   .restart-row { text-align: center; margin-top: 1.25rem; }
@@ -436,11 +452,11 @@ const RESULTS = {
     emoji: "🌱", desc: "지금 가장 중요한 건 '시작'이에요. 짧고 쉬운 챌린지로 그리는 습관부터 만들어봐요!",
     heroBg: "#0F6E56", badgeBg: "rgba(255,255,255,0.2)", badgeColor: "#fff",
     steps: [
-      { name: "이모티콘 드로잉 챌린지",      cat: "챌린지반",    stepBg: "#E1F5EE", numBg: "#1D9E75" },
-      { name: "신입 미캔기여자 챌린지 (3주)", cat: "챌린지반",    stepBg: "#E1F5EE", numBg: "#1D9E75" },
-      { name: "아이패드 프로크리에이트",      cat: "디지털드로잉", stepBg: "#E8F6F3", numBg: "#0F7B6C" },
+      { name: "이모티콘 드로잉 챌린지", url: "https://cafe.naver.com/drawemoticon/71290",      cat: "챌린지반",    stepBg: "#E1F5EE", numBg: "#1D9E75" },
+      { name: "신입 미캔기여자 챌린지 (3주)", url: "https://cafe.naver.com/drawemoticon/121929", cat: "챌린지반",    stepBg: "#E1F5EE", numBg: "#1D9E75" },
+      { name: "아이패드 프로크리에이트", url: "https://cafe.naver.com/drawemoticon/59759",      cat: "디지털드로잉", stepBg: "#E8F6F3", numBg: "#0F7B6C" },
     ],
-    tipLabel: "유진 님의 한 마디",
+    tipLabel: "수강생님께 드리는 한 마디",
     tip: "처음엔 완성도보다 '매일 조금씩'이 훨씬 중요해요. 챌린지반에서 함께 그리다 보면 어느새 습관이 생겨요."
   },
   beginner_profit: {
@@ -448,11 +464,11 @@ const RESULTS = {
     emoji: "💸", desc: "처음이어도 괜찮아요! 가장 진입이 쉬운 수익화 루트부터 차근차근 가요.",
     heroBg: "#0F6E56", badgeBg: "rgba(255,255,255,0.2)", badgeColor: "#fff",
     steps: [
-      { name: "이모티콘 드로잉 챌린지",       cat: "챌린지반",    stepBg: "#E1F5EE", numBg: "#1D9E75" },
-      { name: "아이패드 프로크리에이트",       cat: "디지털드로잉", stepBg: "#E8F6F3", numBg: "#0F7B6C" },
-      { name: "미캔 기여자 수익화 정규반",     cat: "스톡 그림",   stepBg: "#FEF3C7", numBg: "#B45309" },
+      { name: "이모티콘 드로잉 챌린지", url: "https://cafe.naver.com/drawemoticon/71290",       cat: "챌린지반",    stepBg: "#E1F5EE", numBg: "#1D9E75" },
+      { name: "아이패드 프로크리에이트", url: "https://cafe.naver.com/drawemoticon/59759",       cat: "디지털드로잉", stepBg: "#E8F6F3", numBg: "#0F7B6C" },
+      { name: "미캔 기여자 수익화 정규반", url: "https://naver.me/FyA10Qtx",     cat: "스톡 그림",   stepBg: "#FEF3C7", numBg: "#B45309" },
     ],
-    tipLabel: "유진 님의 한 마디",
+    tipLabel: "수강생님께 드리는 한 마디",
     tip: "미리캔버스 기여자는 그림 실력보다 '꾸준함'이 더 중요해요. 첫 수익이 생기면 모든 게 달라져요!"
   },
   basic_profit: {
@@ -460,11 +476,11 @@ const RESULTS = {
     emoji: "🎯", desc: "기초는 있으니까 바로 수익화 루트로 진입할 수 있어요! 이모티콘이 가장 빠른 길이에요.",
     heroBg: "#B45309", badgeBg: "rgba(255,255,255,0.2)", badgeColor: "#fff",
     steps: [
-      { name: "이모티콘 초급반",       cat: "이모티콘", stepBg: "#E3F5FB", numBg: "#0284C7" },
-      { name: "이모티콘 중급반",       cat: "이모티콘", stepBg: "#E3F5FB", numBg: "#0284C7" },
-      { name: "이모티콘 카톡미니반",   cat: "이모티콘", stepBg: "#E3F5FB", numBg: "#0284C7" },
+      { name: "이모티콘 초급반", url: "https://cafe.naver.com/drawemoticon/72182",       cat: "이모티콘", stepBg: "#E3F5FB", numBg: "#0284C7" },
+      { name: "이모티콘 중급반", url: "https://cafe.naver.com/drawemoticon/72271",       cat: "이모티콘", stepBg: "#E3F5FB", numBg: "#0284C7" },
+      { name: "이모티콘 카톡미니반", url: "https://cafe.naver.com/drawemoticon/143190",   cat: "이모티콘", stepBg: "#E3F5FB", numBg: "#0284C7" },
     ],
-    tipLabel: "유진 님의 한 마디",
+    tipLabel: "수강생님께 드리는 한 마디",
     tip: "초급→중급→카톡미니 순으로 듣는 게 승인률을 높이는 가장 빠른 루트예요. 순서를 꼭 지켜요!"
   },
   basic_scale: {
@@ -472,11 +488,11 @@ const RESULTS = {
     emoji: "📈", desc: "스톡과 이모티콘을 병행하면 수입 채널이 두 배가 돼요!",
     heroBg: "#B45309", badgeBg: "rgba(255,255,255,0.2)", badgeColor: "#fff",
     steps: [
-      { name: "미캔 기여자 수익화 정규반", cat: "스톡 그림", stepBg: "#FEF3C7", numBg: "#B45309" },
-      { name: "국내외 스톡 확장반",        cat: "스톡 그림", stepBg: "#FEF3C7", numBg: "#B45309" },
-      { name: "이모티콘 심화반",           cat: "이모티콘",  stepBg: "#E3F5FB", numBg: "#0284C7" },
+      { name: "미캔 기여자 수익화 정규반", url: "https://naver.me/FyA10Qtx", cat: "스톡 그림", stepBg: "#FEF3C7", numBg: "#B45309" },
+      { name: "국내외 스톡 확장반", url: "https://naver.me/GvWz7bzn",        cat: "스톡 그림", stepBg: "#FEF3C7", numBg: "#B45309" },
+      { name: "이모티콘 심화반", url: "https://cafe.naver.com/drawemoticon/85160",           cat: "이모티콘",  stepBg: "#E3F5FB", numBg: "#0284C7" },
     ],
-    tipLabel: "유진 님의 한 마디",
+    tipLabel: "수강생님께 드리는 한 마디",
     tip: "미캔 기여자와 해외 스톡은 한 번 업로드하면 계속 수익이 들어오는 '자동화 수입' 구조예요."
   },
   intermediate_scale: {
@@ -484,11 +500,11 @@ const RESULTS = {
     emoji: "🚀", desc: "실력이 있으니 이제 시스템을 만들 차례예요! GIF + SNS로 시너지를 만들어요.",
     heroBg: "#1D4ED8", badgeBg: "rgba(255,255,255,0.2)", badgeColor: "#fff",
     steps: [
-      { name: "클립스튜디오 + GIF",   cat: "디지털드로잉", stepBg: "#DBEAFE", numBg: "#1D4ED8" },
-      { name: "이모티콘 심화반",       cat: "이모티콘",     stepBg: "#E3F5FB", numBg: "#0284C7" },
-      { name: "그림 인스타 운영",      cat: "크리에이터",   stepBg: "#EDE9FE", numBg: "#7C3AED" },
+      { name: "클립스튜디오 + GIF", url: "https://cafe.naver.com/drawemoticon/154355",   cat: "디지털드로잉", stepBg: "#DBEAFE", numBg: "#1D4ED8" },
+      { name: "이모티콘 심화반", url: "https://cafe.naver.com/drawemoticon/85160",       cat: "이모티콘",     stepBg: "#E3F5FB", numBg: "#0284C7" },
+      { name: "그림 인스타 운영", url: null,      cat: "크리에이터",   stepBg: "#EDE9FE", numBg: "#7C3AED" },
     ],
-    tipLabel: "유진 님의 한 마디",
+    tipLabel: "수강생님께 드리는 한 마디",
     tip: "GIF 이모티콘은 일반보다 승인률이 높아요. 동시에 인스타 채널을 키우면 브랜드 효과까지 따라와요!"
   },
   intermediate_expert: {
@@ -496,11 +512,11 @@ const RESULTS = {
     emoji: "🎓", desc: "실력을 더 단단히 쌓고, 강사·외주로 발전해봐요!",
     heroBg: "#1D4ED8", badgeBg: "rgba(255,255,255,0.2)", badgeColor: "#fff",
     steps: [
-      { name: "일러스트레이터 기본/응용",       cat: "디지털드로잉", stepBg: "#DBEAFE", numBg: "#1D4ED8" },
-      { name: "디지털 캘리그라피",              cat: "크리에이터",   stepBg: "#EDE9FE", numBg: "#7C3AED" },
-      { name: "디지털드로잉 강사양성반",        cat: "크리에이터",   stepBg: "#EDE9FE", numBg: "#7C3AED" },
+      { name: "일러스트레이터 기본/응용", url: "https://cafe.naver.com/drawemoticon/67989",       cat: "디지털드로잉", stepBg: "#DBEAFE", numBg: "#1D4ED8" },
+      { name: "디지털 캘리그라피", url: "https://cafe.naver.com/drawemoticon/17139",              cat: "크리에이터",   stepBg: "#EDE9FE", numBg: "#7C3AED" },
+      { name: "디지털드로잉 강사양성반", url: null,        cat: "크리에이터",   stepBg: "#EDE9FE", numBg: "#7C3AED" },
     ],
-    tipLabel: "유진 님의 한 마디",
+    tipLabel: "수강생님께 드리는 한 마디",
     tip: "일러스트레이터는 클라이언트 작업에서 가장 많이 요구되는 툴이에요. 먼저 마스터하면 외주 단가가 달라져요."
   },
   advanced_expert: {
@@ -508,11 +524,11 @@ const RESULTS = {
     emoji: "🌟", desc: "실력도 있고 방향도 명확해요. 이제 브랜드와 자산을 만들 시간!",
     heroBg: "#5B21B6", badgeBg: "rgba(255,255,255,0.2)", badgeColor: "#fff",
     steps: [
-      { name: "AI 동화책 출판",           cat: "크리에이터", stepBg: "#EDE9FE", numBg: "#7C3AED" },
-      { name: "나만의 굿즈 제작",         cat: "크리에이터", stepBg: "#EDE9FE", numBg: "#7C3AED" },
-      { name: "디지털드로잉 강사양성반",  cat: "크리에이터", stepBg: "#EDE9FE", numBg: "#7C3AED" },
+      { name: "AI 동화책 출판", url: "https://cafe.naver.com/drawemoticon/132482",           cat: "크리에이터", stepBg: "#EDE9FE", numBg: "#7C3AED" },
+      { name: "나만의 굿즈 제작", url: null,         cat: "크리에이터", stepBg: "#EDE9FE", numBg: "#7C3AED" },
+      { name: "디지털드로잉 강사양성반", url: null,  cat: "크리에이터", stepBg: "#EDE9FE", numBg: "#7C3AED" },
     ],
-    tipLabel: "유진 님의 한 마디",
+    tipLabel: "수강생님께 드리는 한 마디",
     tip: "AI 툴과 굿즈 제작을 병행하면 콘텐츠 생산 속도가 3배 빨라져요. 강사양성반으로 수익을 다각화해요."
   },
   advanced_scale: {
@@ -520,11 +536,11 @@ const RESULTS = {
     emoji: "💎", desc: "이미 실력이 있는 당신, 이제 수익화 시스템만 잡으면 돼요!",
     heroBg: "#5B21B6", badgeBg: "rgba(255,255,255,0.2)", badgeColor: "#fff",
     steps: [
-      { name: "이모티콘 심화반",          cat: "이모티콘",   stepBg: "#E3F5FB", numBg: "#0284C7" },
-      { name: "국내외 스톡 확장반",       cat: "스톡 그림",  stepBg: "#FEF3C7", numBg: "#B45309" },
-      { name: "그림 인스타 운영",         cat: "크리에이터", stepBg: "#EDE9FE", numBg: "#7C3AED" },
+      { name: "이모티콘 심화반", url: "https://cafe.naver.com/drawemoticon/85160",          cat: "이모티콘",   stepBg: "#E3F5FB", numBg: "#0284C7" },
+      { name: "국내외 스톡 확장반", url: "https://naver.me/GvWz7bzn",       cat: "스톡 그림",  stepBg: "#FEF3C7", numBg: "#B45309" },
+      { name: "그림 인스타 운영", url: null,         cat: "크리에이터", stepBg: "#EDE9FE", numBg: "#7C3AED" },
     ],
-    tipLabel: "유진 님의 한 마디",
+    tipLabel: "수강생님께 드리는 한 마디",
     tip: "실력이 있다면 플랫폼 다각화가 핵심이에요. 이모티콘·스톡·SNS 세 채널을 동시에 키워봐요."
   },
   ai_any: {
@@ -532,11 +548,11 @@ const RESULTS = {
     emoji: "🤖", desc: "AI를 잘 쓰면 혼자서도 10명 몫의 콘텐츠를 만들 수 있어요!",
     heroBg: "#0F7B6C", badgeBg: "rgba(255,255,255,0.2)", badgeColor: "#fff",
     steps: [
-      { name: "AI 동화책 출판",       cat: "크리에이터", stepBg: "#EDE9FE", numBg: "#7C3AED" },
-      { name: "AI 이미지 영상 판매",  cat: "크리에이터", stepBg: "#EDE9FE", numBg: "#7C3AED" },
-      { name: "나만의 굿즈 제작",     cat: "크리에이터", stepBg: "#EDE9FE", numBg: "#7C3AED" },
+      { name: "AI 동화책 출판", url: "https://cafe.naver.com/drawemoticon/132482",       cat: "크리에이터", stepBg: "#EDE9FE", numBg: "#7C3AED" },
+      { name: "AI 이미지 영상 판매", url: null,  cat: "크리에이터", stepBg: "#EDE9FE", numBg: "#7C3AED" },
+      { name: "나만의 굿즈 제작", url: null,     cat: "크리에이터", stepBg: "#EDE9FE", numBg: "#7C3AED" },
     ],
-    tipLabel: "유진 님의 한 마디",
+    tipLabel: "수강생님께 드리는 한 마디",
     tip: "AI 이미지로 굿즈까지 연결하면 제작 비용 없이 판매 수익을 만들 수 있어요. 효율이 핵심이에요!"
   },
   default: {
@@ -544,11 +560,11 @@ const RESULTS = {
     emoji: "✏️", desc: "어디서 시작해야 할지 막막하다면, 챌린지반으로 가볍게 시작해요!",
     heroBg: "#0F6E56", badgeBg: "rgba(255,255,255,0.2)", badgeColor: "#fff",
     steps: [
-      { name: "이모티콘 드로잉 챌린지",   cat: "챌린지반",    stepBg: "#E1F5EE", numBg: "#1D9E75" },
-      { name: "아이패드 프로크리에이트",  cat: "디지털드로잉", stepBg: "#E8F6F3", numBg: "#0F7B6C" },
-      { name: "이모티콘 초급반",          cat: "이모티콘",     stepBg: "#E3F5FB", numBg: "#0284C7" },
+      { name: "이모티콘 드로잉 챌린지", url: "https://cafe.naver.com/drawemoticon/71290",   cat: "챌린지반",    stepBg: "#E1F5EE", numBg: "#1D9E75" },
+      { name: "아이패드 프로크리에이트", url: "https://cafe.naver.com/drawemoticon/59759",  cat: "디지털드로잉", stepBg: "#E8F6F3", numBg: "#0F7B6C" },
+      { name: "이모티콘 초급반", url: "https://cafe.naver.com/drawemoticon/72182",          cat: "이모티콘",     stepBg: "#E3F5FB", numBg: "#0284C7" },
     ],
-    tipLabel: "유진 님의 한 마디",
+    tipLabel: "수강생님께 드리는 한 마디",
     tip: "처음엔 완성도보다 습관이 먼저예요. 챌린지반은 딱 3주, 가볍게 시작할 수 있어요."
   },
 };
@@ -625,14 +641,17 @@ function showResult() {
     <div class="result-body">
       <div class="road-label">추천 강의 로드맵</div>
       <div class="road-steps">
-        ${r.steps.map((s, i) => `
-          <div class="road-step" style="background:${s.stepBg}">
-            <div class="step-num" style="background:${s.numBg}">${i + 1}</div>
-            <div>
-              <div class="step-name">${s.name}</div>
-              <div class="step-cat">${s.cat}</div>
-            </div>
-          </div>`).join("")}
+        ${r.steps.map((s, i) => {
+          var linkHtml = s.url
+            ? '<a href="' + s.url + '" target="_blank" class="step-link">강의 보기 &#8594;</a>'
+            : "";
+          return '<div class="road-step" style="background:' + s.stepBg + '">'
+            + '<div class="step-num" style="background:' + s.numBg + '">' + (i + 1) + '</div>'
+            + '<div style="flex:1"><div class="step-name">' + s.name + '</div>'
+            + '<div class="step-cat">' + s.cat + '</div></div>'
+            + linkHtml
+            + '</div>';
+        }).join("")}
       </div>
       <div class="tip-box">
         <div class="tip-label">${r.tipLabel}</div>
